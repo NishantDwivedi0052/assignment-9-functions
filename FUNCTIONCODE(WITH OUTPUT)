@@ -1,0 +1,92 @@
+Q1 Write a function to print squares of first n natural numbers, taking n as argument to the function.
+ANS- 
+    #include<iostream>
+    using namespace std;
+    void printSquare(int n){
+        for(int i=1;i<=n;i++){
+            cout<<i*i<<endl;
+        }
+    }
+    int main(){
+        int n;
+        cout<<"Enter n : ";
+        cin>>n;
+        printSquare(n);
+    }
+OUTPUT - Enter n : 4
+        1
+        4
+        9
+        16
+Q2 Write a function that takes the radius of a circle as an argument and returns its area.
+ANS - #include<iostream>
+      using namespace std;
+      float areaOfCircle(float radius){
+          float area = 3.1415*radius*radius;
+          return area;
+      }
+      int main(){
+          float r;
+          cout<<"Enter radius : ";
+          cin>>r;
+          cout<<areaOfCircle(r);
+      }
+OUTPUT - Enter radius : 9
+         254.462
+Q3 Given two numbers a and b, write a function to print all odd numbers between them.
+ANS - #include<iostream>
+      using namespace std;
+      void print(int a,int b){
+          for(int i=a;i<=b;i++){
+              if(i%2!=0) cout<<i<<" ";
+      
+          }
+      }
+      int main(){
+          int a;
+          cout<<"Enter first number : ";
+          cin>>a;
+          int b;
+          cout<<"Enter second number : ";
+          cin>>b;
+          print(min(a,b),max(a,b));
+      }
+OUTPUT -  Enter first number : 1
+          Enter second number : 15  
+          1 3 5 7 9 11 13 15 
+Q4 Write a function to count the number of digits in a number and then print the square of this number.
+ANS - #include<iostream>
+      using namespace std;
+      int squareOfCount(int n){
+          int count = 0;
+          while(n!=0){
+              n /= 10;
+              count++;
+          }
+          return count*count;
+      }
+      int main(){
+          int n;
+          cout<<"Enter a number : ";
+          cin>>n;
+          cout<<squareOfCount(n);
+      }
+OUTPUT - Enter a number : 4565
+         16
+Q5 The minimum number of functions present in any C++ program is:
+  1. 0
+  2. 1
+  3. 2
+  4. Infinite
+ANS - 1 (CORRECT 2)
+      The main function itself.
+
+Q6 State True and False:
+  1.  A function may be called more than once from any other function. True
+  2.  It is necessary for a function to return some value. False
+
+Q7 Can the same function name be used for different functions without any conflict?
+ANS - 
+      The same function name can be used for different functions without any conflict if and only if they either have different data types for arguments or different number
+      of arguments. Same function names cannot be used if functions differ only by their  return type because the compiler would not then know which function is to be used.
+      
